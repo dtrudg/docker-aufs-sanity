@@ -52,7 +52,7 @@ Here we create 3 directories to test directory, file, and no whiteout.
 
 Directory `/test/whiteout-dir/` is created, and has a single file, `file1` added inside it.
 
-We then remove `file1` and `/test/whiteout-dir/` itself. At this point there is no `/test/whiteout-dir` visible in our container. Docker will mark this by creating a whiteout file `/test/.wh.whiteout-dir` in the layer tar, which instructs the extracting tool to remove the directory during extraction, just as we did in our Dockerfile RUN steps.
+We then remove `file1` and `/test/whiteout-dir/` itself. At this point there is no `/test/whiteout-dir/` visible in our container. Docker will mark this by creating a whiteout file `/test/.wh.whiteout-dir` in the layer tar, which instructs the extracting tool to remove the directory during extraction, just as we did in our Dockerfile RUN steps.
 
 Finally we recreate `/test/whiteout-dir/` and put a new file `file2` into it.
 
@@ -69,7 +69,7 @@ If we extract our container layers correctly we should see `/test/whiteout-file/
 
 **No Whiteout**
 
-Directory `/test/normal-dir/` has a `file1` and `file2` added to it, with no removals mad in later RUN steps.
+Directory `/test/normal-dir/` has two files, `file1` and `file2`, added to it with no removals made in later RUN steps.
 
 If we extract our container layers correctly we should see `/test/normal-dir/` containing both `file1` and `file2`.
 
