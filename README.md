@@ -2,7 +2,7 @@
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/dctrud/docker-aufs-sanity.svg)](https://hub.docker.com/r/dctrud/docker-aufs-sanity/)
 
-This repo contains a Dockerfile defining the container `dctrud/docker-aufs-sanity` on docker hub.
+This repo contains a Dockerfile defining the container `dctrud/docker-aufs-sanity` on [docker hub](https://hub.docker.com/r/dctrud/docker-aufs-sanity/).
 
 This is a small docker container that can be used to test container software that extracts docker multi-layer images (e.g. Singularity), to ensure that they handle aufs whiteout correctly.
 
