@@ -14,10 +14,10 @@ $ docker run dctrud/docker-aufs-sanity
 /test/normal-dir
 /test/normal-dir/file1
 /test/normal-dir/file2
-/test/opaque-dir
-/test/opaque-dir/file2
 /test/whiteout-dir
 /test/whiteout-dir/file2
+/test/whiteout-file
+/test/whiteout-file/file2
 ```
 
 If your aufs extraction is incorrect you will likely see an additional `file1` inside the directories `whiteout-dir/`, `whiteout-file/`, or both. You will also likely see the whiteout marker files (beginning `.wh.`) E.g. with Singularity v2.4:
